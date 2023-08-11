@@ -9,8 +9,8 @@ const App =() => {
 
   return (
     <div>
-      <ItemListContainer greeting="¡Las mejores zapatillas del pais!" />
       <NavBarComponent/>
+      <ItemListContainer greeting="¡Las mejores zapatillas del pais!" />
     </div>
   )
 }
