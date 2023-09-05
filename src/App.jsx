@@ -1,18 +1,14 @@
-import './App.css'
-import NavBarComponent from './components/NavBarComponent'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import MainLayout from "./layouts/MainLayout";
+import MainRouter from "./routes/MainRouter";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const App =() => {
-  
-
+const App = () => {
   return (
-    <div>
-      <NavBarComponent/>
-      <ItemListContainer greeting="¡Las mejores zapatillas del pais!" />
-    </div>
-  )
-}
+    <MainLayout>
+      <MainRouter />
+    </MainLayout>
+  );
+};
 
-export default App
+export default App;

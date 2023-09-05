@@ -1,18 +1,33 @@
-import React from 'react';
+import { useNavigate } from "react-router-dom";
 
-const ItemListContainer = ({ greeting }) => {
-  const containerStyle = {
-    border: '1px solid #ccc',
-    padding: '20px',
-    borderRadius: '5px',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center'
-  };
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
+import styles from "./ItemListContainer.module.css";
+
+const ItemListContainer = ({ productsData }) => {
+  //useNavigate nos permite navegar entre rutas dentro de nuestra aplicación
+  const navigate = useNavigate();
 
   return (
-    <div style={containerStyle}>
-      <h2>Bienvenido a AG Calzados</h2>
-      <p>{greeting}</p>
+    <div className={styles.productContainer}>
+      {productsData.map((product) => {
+        return (
+          <Card style={{ width: "18rem" }} key={product.id}>
+            <Card.Img variant="top" src={product.thumbnail} />
+            <Card.Body>
+              <Card.Title>{product.title}</Card.Title>
+              <Card.Text>{product.description}</Card.Text>
+              <Button
+                variant="primary"
+                onClick={() => navigate(`/item/${product.id}`)}
+              >
+                Detalles
+              </Button>
+            </Card.Body>
+          </Card>
+        );
+      })}
     </div>
   );
 };
