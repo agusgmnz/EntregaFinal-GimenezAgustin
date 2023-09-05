@@ -12,7 +12,7 @@ const LoaderComponent = () => {
         justifyContent: "center",
       }}
     >
-      <Waveform size={40} lineWeight={3.5} speed={1} color="white" />
+      <Waveform size={40} lineWeight={3.5} speed={0.5} color="Red" />
     </div>
   );
 };

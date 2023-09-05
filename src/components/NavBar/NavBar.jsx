@@ -10,7 +10,7 @@ const NavBar = () => {
     <Navbar expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <Link to="/">TecnoStore</Link>
+          <Link to="/">📱TecnoStore📱</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -20,10 +20,10 @@ const NavBar = () => {
             </Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
               <NavDropdown.Item>
-                <Link to="/category/laptops">Netbooks</Link>
+                <Link to="/category/laptops">Netbooks💻</Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="/category/smartphones">Celulares</Link>
+                <Link to="/category/smartphones">Celulares📱</Link>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
